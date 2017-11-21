@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>new2</name>
+    </assembly>
+    <members>
+        <member name="F:new2.AboutBox.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:new2.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+        </member>
+        <member name="M:new2.AboutBox.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:new2.Form1">
+            <summary>
+            Основной класс выполнения программы
+            </summary>
+        </member>
+        <member name="F:new2.Form1.queue">
+            <summary>
+            Очередь в которой храниться путь
+            </summary>
+        </member>
+        <member name="F:new2.Form1.queueForm2">
+            <summary>
+            Очередь в которой храниться путь для второго окна
+            </summary>
+        </member>
+        <member name="F:new2.Form1.index">
+            <summary>
+            индекс что бы было удобно перемещаться по элементам очереди
+            </summary>
+        </member>
+        <member name="F:new2.Form1.from">
+            <summary>
+            строка в которой храниться путь от куда следует копировать файлы или папки
+            </summary>
+        </member>
+        <member name="F:new2.Form1.to">
+            <summary>
+            строка в которой храниться путь куда следует копировать файлы или папки
+            </summary>
+        </member>
+        <member name="F:new2.Form1.files">
+            <summary>
+            для множественного выбота файлов
+            </summary>
+        </member>
+        <member name="F:new2.Form1.direcroty">
+            <summary>
+            для множественного выбота файлов
+            </summary>
+        </member>
+        <member name="F:new2.Form1.sorting">
+            <summary>
+            для сортировки
+            </summary>
+        </member>
+        <member name="M:new2.Form1.#ctor">
+            <summary>
+            инициализация формы
+            </summary>
+        </member>
+        <member name="M:new2.Form1.Form1_Load(System.Object,System.EventArgs)">
+            <summary>
+            Заполнение формы перед открытием
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.GetMyDriver">
+            <summary>
+            добавляет в listView логические диски
+            </summary>
+        </member>
+        <member name="M:new2.Form1.treeView_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            событие реагирует если выбран узел treeView
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.treeView_NodeMouseClick(System.Object,System.Windows.Forms.TreeNodeMouseClickEventArgs)">
+            <summary>
+            если кликнуть мышкой по узлу то он отобразит папки которые в нем
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            по клику переход или открытие папки или файла в listView
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.FillingListView(System.Collections.Generic.Queue{System.String})">
+            <summary>
+            Заполнение элементами listView
+            </summary>
+            <param name="q"></param>
+        </member>
+        <member name="M:new2.Form1.Attribut(System.String)">
+            <summary>
+            Проверка если файлы или папки скрыты что бы их не отображать
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:new2.Form1.btnBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            кнопка которая возвращает к предедущей папке которая была
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.btnForward_Click(System.Object,System.EventArgs)">
+            <summary>
+            если был переход вперед затем назад кнопка может вернуть отображение папок
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.CheckSlash(System.String)">
+            <summary>
+            проверяет есть ли в строке слэш
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:new2.Form1.CheckDiskLetter(System.String)">
+            <summary>
+            проверка на букву диска
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:new2.Form1.ParseSlash(System.String)">
+            <summary>
+            разбивает строку по слэшу для заполнения очереди
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:new2.Form1.RemoveLastElemQueue(System.Collections.Generic.Queue{System.String})">
+            <summary>
+            удаление последнего элемента в очереди
+            </summary>
+            <param name="q"></param>
+            <returns></returns>
+        </member>
+        <member name="M:new2.Form1.openToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            открывает через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.FillingListViewForm2(System.Collections.Generic.Queue{System.String})">
+            <summary>
+            Заполнение ListView во втором окне
+            </summary>
+            <param name="q"></param>
+        </member>
+        <member name="M:new2.Form1.toOpenInANewWindowToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            открывает в новом окне через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.copyToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            копирует через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.FillingQueue(System.String[])">
+            <summary>
+            Заполнение очереди
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:new2.Form1.insertToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            вставляет через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.GetDir(System.String,System.String)">
+            <summary>
+            рекурсивно обходит вложенные папки (нужно для копирования)
+            </summary>
+            <param name="f"></param>
+            <param name="t"></param>
+        </member>
+        <member name="M:new2.Form1.deleteToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            удаляет через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.renameToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            переименовывает через контекстное меню файл или папку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_AfterLabelEdit(System.Object,System.Windows.Forms.LabelEditEventArgs)">
+            <summary>
+            срабатывает после переименования файла и проверяет на запрещенные знаки
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_BeforeLabelEdit(System.Object,System.Windows.Forms.LabelEditEventArgs)">
+            <summary>
+            срабатывает после переименования файла и сохраняет что переименовывать
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_ColumnClick(System.Object,System.Windows.Forms.ColumnClickEventArgs)">
+            <summary>
+            сортировка столбцов
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.btnList_Click(System.Object,System.EventArgs)">
+            <summary>
+            отображение элементов listView спаиском
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.btnPictures_Click(System.Object,System.EventArgs)">
+            <summary>
+            отображение элементов listView эскизами
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.открытьToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            открытие через меню
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_DragDrop(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            возможность копировать в проект при помощи перетаскивания
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.listView_DragEnter(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Начало перетаскивания
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:new2.Form1.опрограммеToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            выдает небольшую справку о программе
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:new2.Form1.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:new2.Form1.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:new2.Form1.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="F:new2.Form2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:new2.Form2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:new2.Form2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:new2.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="F:new2.TextChenge.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:new2.TextChenge.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:new2.TextChenge.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:new2.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:new2.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:new2.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>
